@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calorie Calculator</title>
+</head>
+<body>
+    <input type="number" id="hours" placeholder="Enter hours">
+    <input type="number" id="burned" placeholder="Enter calories burned">
+    <button onclick="calculateCalories()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateCalories() {
+            const hours = parseInt(document.getElementById("hours").value);
+            const burned = parseInt(document.getElementById("burned").value);
+
+            const totalCalories = (burned + ((24 - hours) * 77));
+
+            document.getElementById("result").textContent = `Calories by EOD: ${totalCalories}`;
+        }
+    </script>
+</body>
+</html>
+
+
